@@ -105,18 +105,6 @@ public class Shop {
         System.out.println("Average price: " + averagePrice);
     }
 
-    public double findMaxDailyIncome() {
-        Map<LocalDate, Double> dailyIncome = purchases.stream()
-                .collect(Collectors.groupingBy(
-                        Purchase::getDate,
-                        Collectors.summingDouble(purchase -> purchase.getProduct().getPrice() * purchase.getAmount())
-                ));
-
-        return dailyIncome.values().stream()
-                .max(Double::compareTo)
-                .orElse(0.0);
-    }
-
         public double calculateUserExpenses(final String username) {
             List<Purchase> userPurchases = purchases.stream()
                     .filter(purchase -> purchase.getUsername().equals(username))
