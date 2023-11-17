@@ -83,10 +83,10 @@ public class Shop {
                 .forEach(Purchase::addBag);
     }
 
-    public List<String> commentToCheck() {
+      public List<String> FishAndMeat() {
         return products.stream()
                 .filter(e -> (e.getName().equals("Fish") || e.getName().equals("Meat") ))
-                .map(e -> "Put " + e.getName() + " in the fridge")
+                .map(e -> "Save " + e.getName() + " in the fridge")
                 .collect(Collectors.toList());
     }
 
