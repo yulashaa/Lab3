@@ -20,11 +20,11 @@ public class FileService {
 
                     System.out.println("Product: " + productName + ", price: " + price + ", amount: " + amount);
                 } else {
-                    System.out.println("Invalid string format: " + line);
+                     throw new FileOpenException();
                 }
             });
-        } catch (IOException e) {
-            System.err.println("Error while reading file: " + e.getMessage());
+        } catch (final IOException | NumberFormatException e) {
+            throw new FileOpenException();
         }
 
     }
