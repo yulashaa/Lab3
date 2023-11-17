@@ -23,5 +23,8 @@ public class Main {
         purchase.setPaid(true);
         purchase.printReceipt();
 
+        shop.averagePrice();
+        shop.sortByPrice();
+
     }
 }
