@@ -80,7 +80,7 @@ public class Shop {
                 .forEach(Purchase::addBag);
     }
 
-      public List<String> FishAndMeat() {
+      public List<String> saveFishAndMeat() {
         return products.stream()
                 .filter(e -> (e.getName().equals("Fish") || e.getName().equals("Meat") ))
                 .map(e -> "Save " + e.getName() + " in the fridge")
