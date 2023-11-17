@@ -30,9 +30,6 @@ public class Shop {
                     p.setAmount(newAmount);
                 });
     }
-    public void addUser(final String username) {
-        customers.put(username, new Customer(username));
-    }
 
     public void orderProduct(final String username, final String productName, final int amount) {
         products.stream()
